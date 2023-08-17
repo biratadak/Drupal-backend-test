@@ -1,0 +1,14 @@
+uuid: dc5927d9-d3e3-430e-bc4f-dafccf281b84
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - adakveer@gmail.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''
