@@ -1,0 +1,5 @@
+name: My API
+type: module
+description: expose the products through an API 
+core_version_requirement: ^10
+package: Custom
