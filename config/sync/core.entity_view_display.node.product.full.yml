@@ -1,0 +1,89 @@
+uuid: 8ec40eba-450b-4b87-a79c-16fdae4b4a5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.product.field_body
+    - field.field.node.product.field_category
+    - field.field.node.product.field_description
+    - field.field.node.product.field_images
+    - field.field.node.product.field_price
+    - node.type.product
+  module:
+    - image
+    - smart_trim
+    - user
+id: node.product.full
+targetEntityType: node
+bundle: product
+mode: full
+content:
+  field_body:
+    type: smart_trim
+    label: above
+    settings:
+      trim_length: 50
+      trim_type: words
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more:
+        display_link: true
+        target_blank: false
+        link_trim_only: true
+        class: more-link
+        text: 'Read More'
+        aria_label: 'Read more about [node:title]'
+        token_browser: ''
+      summary_handler: full
+      trim_options:
+        text: false
+        trim_zero: false
+        replace_tokens: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_images:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
