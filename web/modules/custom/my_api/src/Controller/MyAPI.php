@@ -9,13 +9,13 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- *  Getting the content data as jsondata
+ * Getting the content data as jsondata.
  */
 class MyAPI extends ControllerBase {
   protected $entityManager;
 
   /**
-   *  Instantiating EntityTypeManagerInterface $entity
+   * Instantiating EntityTypeManagerInterface $entity.
    */
   public function __construct(EntityTypeManagerInterface $entity) {
     $this->entityManager = $entity;
@@ -31,7 +31,7 @@ class MyAPI extends ControllerBase {
   }
 
   /**
-   * Getting the Products nodes using Request module. 
+   * Getting the Products nodes using Request module.
    */
   public function view(Request $req) {
     $headers = $req->headers->get('api');
@@ -61,7 +61,7 @@ class MyAPI extends ControllerBase {
 
     $result = [];
     // For each product just getting the Title, description, price, images fields.
-    foreach ($data['content_type']['product'] as $key=>$product) {
+    foreach ($data['content_type']['product'] as $key => $product) {
       $result[] = [$product['title'], $product['field_description'], $product['field_price'], $product['image']];
     }
 

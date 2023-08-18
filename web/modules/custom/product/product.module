@@ -5,10 +5,13 @@
  * Implementation of hook_node_view_alter();
  */
 
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+
 /**
  * Implements hook_ENTITY_TYPE_view().
  */
-function product_node_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+function product_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
 
   $build['mybutton'] = [
     '#type'       => 'button',
@@ -16,5 +19,5 @@ function product_node_view(array &$build, \Drupal\Core\Entity\EntityInterface $e
     '#value'      => t('Click Here'),
 
   ];
-  
+
 }
