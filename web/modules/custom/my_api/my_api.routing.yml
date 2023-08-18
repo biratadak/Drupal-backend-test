@@ -1,0 +1,7 @@
+my_api.view:
+  path: /myapi
+  defaults:
+    _controller: Drupal\my_api\Controller\MyAPI::view
+    _title: API for expose the products through an APIexpose the products through an API
+  requirements:
+    _permission: 'access content'

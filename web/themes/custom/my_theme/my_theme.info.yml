@@ -1,0 +1,10 @@
+name: My Theme
+type: theme
+version: 1.0
+core_version_requirement: ^10
+base theme: olivero
+libraries:
+  - olivero/global-styling
+  - olivero/global-scripts
+  - my_theme/global-styling
+  - my_theme/global-scripts

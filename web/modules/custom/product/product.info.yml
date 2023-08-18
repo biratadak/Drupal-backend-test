@@ -1,0 +1,5 @@
+name: Product
+type: module
+description: To add custom functionality in products.
+core_version_requirement: ^10
+package: Custom
