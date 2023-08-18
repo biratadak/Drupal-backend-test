@@ -3,10 +3,13 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+      
 
 global-scripts:
   version: VERSION
   dependencies:
         - core/jquery
   js:
-    js/script.js: {}
+    js/scripts.js: {}
+    //ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js {type: external}
+    

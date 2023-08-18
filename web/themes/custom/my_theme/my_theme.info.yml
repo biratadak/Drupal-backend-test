@@ -6,3 +6,6 @@ base theme: olivero
 libraries:
   - olivero/global-styling
   - olivero/global-scripts
+  - my_theme/global-styling
+  - my_theme/global-scripts
+  

@@ -52,7 +52,6 @@ class MyAPI extends ControllerBase {
             // The actual value is usually in the 'value' key.
             $value = $item['value'];
             // Do something with the field name, value, and langcode.
-            // For example, you can print them:
             $values[$field_name] = $value;
           }
         }
@@ -62,7 +61,7 @@ class MyAPI extends ControllerBase {
 
     $result = [];
     // For each product just getting the Title, description, price, images fields.
-    foreach ($data['content_type']['product'] as $product) {
+    foreach ($data['content_type']['product'] as $key=>$product) {
       $result[] = [$product['title'], $product['field_description'], $product['field_price'], $product['image']];
     }
 
