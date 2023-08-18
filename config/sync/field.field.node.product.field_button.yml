@@ -1,0 +1,28 @@
+uuid: 05147692-f65b-43c2-8315-f5d36af708ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_button
+    - node.type.product
+  module:
+    - link
+id: node.product.field_button
+field_name: field_button
+entity_type: node
+bundle: product
+label: button
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:/home'
+    title: ''
+    options: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 1
+field_type: link

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.product.field_body
+    - field.field.node.product.field_button
     - field.field.node.product.field_category
     - field.field.node.product.field_description
     - field.field.node.product.field_images
@@ -11,19 +11,24 @@ dependencies:
     - node.type.product
   module:
     - image
-    - text
+    - link
     - user
 id: node.product.default
 targetEntityType: node
 bundle: product
 mode: default
 content:
-  field_body:
-    type: text_default
+  field_button:
+    type: link
     label: above
-    settings: {  }
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    weight: 2
+    weight: 6
     region: content
   field_category:
     type: entity_reference_label

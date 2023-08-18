@@ -1,9 +1,14 @@
 uuid: f844c7a6-5de1-4f4b-888a-5e21612571b9
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.product
+  module:
+    - node
 id: content_admin
 label: 'Content Admin'
 weight: 5
 is_admin: null
-permissions: {  }
+permissions:
+  - 'create product content'

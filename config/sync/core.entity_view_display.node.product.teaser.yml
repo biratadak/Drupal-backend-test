@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.product.field_body
+    - field.field.node.product.field_button
     - field.field.node.product.field_category
     - field.field.node.product.field_description
     - field.field.node.product.field_images
@@ -23,7 +23,7 @@ content:
     weight: 100
     region: content
 hidden:
-  field_body: true
+  field_button: true
   field_category: true
   field_description: true
   field_images: true

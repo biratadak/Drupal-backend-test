@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.full
-    - field.field.node.product.field_body
+    - field.field.node.product.field_button
     - field.field.node.product.field_category
     - field.field.node.product.field_description
     - field.field.node.product.field_images
@@ -12,37 +12,24 @@ dependencies:
     - node.type.product
   module:
     - image
-    - smart_trim
+    - link
     - user
 id: node.product.full
 targetEntityType: node
 bundle: product
 mode: full
 content:
-  field_body:
-    type: smart_trim
-    label: above
+  field_button:
+    type: link
+    label: inline
     settings:
-      trim_length: 50
-      trim_type: words
-      trim_suffix: ''
-      wrap_output: false
-      wrap_class: trimmed
-      more:
-        display_link: true
-        target_blank: false
-        link_trim_only: true
-        class: more-link
-        text: 'Read More'
-        aria_label: 'Read more about [node:title]'
-        token_browser: ''
-      summary_handler: full
-      trim_options:
-        text: false
-        trim_zero: false
-        replace_tokens: false
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    weight: 2
+    weight: 5
     region: content
   field_category:
     type: entity_reference_label
@@ -50,7 +37,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_description:
     type: basic_string
@@ -68,7 +55,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 5
+    weight: 4
     region: content
   field_price:
     type: number_decimal
@@ -79,7 +66,7 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content
   links:
     settings: {  }
